@@ -1,5 +1,5 @@
-python-dotenv
+python-dotenv==1.21.1
 
-tapo==0.8.8
-uvicorn==0.40.0
+tapo==0.8.7
+uvicorn==0.39.0
 fastapi==0.128.0
