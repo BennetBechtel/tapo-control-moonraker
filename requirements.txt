@@ -1,4 +1,4 @@
-python-dotenv==1.21.1
+python-dotenv
 
 tapo==0.8.7
 uvicorn==0.39.0

@@ -26,7 +26,11 @@ client = ApiClient(tapo_username=TAPO_USERNAME, tapo_password=TAPO_PASSWORD)
 
 @app.get("/status")
 async def status():
-    device = await client.p100(ip_address=TAPO_IP_ADDRESS)
+    device = (
+        await client.p100(  # Change to fit your smart plug (p100, p105, p110, p115)
+            ip_address=TAPO_IP_ADDRESS
+        )
+    )
     if device is None:
         raise HTTPException(status_code=500, detail="Device not initialized")
 
@@ -40,7 +44,11 @@ async def status():
 
 @app.get("/on")
 async def on():
-    device = await client.p100(ip_address=TAPO_IP_ADDRESS)
+    device = (
+        await client.p100(  # Change to fit your smart plug (p100, p105, p110, p115)
+            ip_address=TAPO_IP_ADDRESS
+        )
+    )
     if device is None:
         raise HTTPException(status_code=500, detail="Device not initialized")
 
@@ -50,7 +58,11 @@ async def on():
 
 @app.get("/off")
 async def off():
-    device = await client.p100(ip_address=TAPO_IP_ADDRESS)
+    device = (
+        await client.p100(  # Change to fit your smart plug (p100, p105, p110, p115)
+            ip_address=TAPO_IP_ADDRESS
+        )
+    )
     if device is None:
         raise HTTPException(status_code=500, detail="Device not initialized")
 
