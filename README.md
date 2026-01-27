@@ -66,9 +66,15 @@ Note: Everywhere you find YOUR_USERNAME you need to insert the name you log into
    WantedBy=multi-user.target
    ```
 
-1. Start the service `sudo systemctl start tapo-control.service` \
-   If something does not work you can check the status with `sudo systemctl status tapo-control.service` and logs with `journalctl -u tapo-control` \
-   Then enable the service so it starts automatically `sudo systemctl enable tapo-control.service`
+1. Reload systemd and start+enable the service
+
+   ```bash
+   sudo systemctl daemon-reload
+   sudo systemctl start tapo-control.service
+   sudo systemctl enable tapo-control.service
+   ```
+
+   If something does not work you can check the status with `sudo systemctl status tapo-control.service` and logs with `journalctl -u tapo-control` \\
 
 1. Edit your `moonraker.conf` in Mainsail/Fluidd, add this at the end.\
    Note: `[power printer]` is a magic string that makes Mainsail display a more prominent [printer power](https://docs.mainsail.xyz/overview/quicktips/printer-power-switch) switch UI element, I'd recommend not changing it.
@@ -85,7 +91,7 @@ Note: Everywhere you find YOUR_USERNAME you need to insert the name you log into
    bound_services: klipper
    ```
 
-   Optional: Add this below `[power printer]`
+   Optional: You can add this below `[power printer]`
 
    ```ini
    off_when_shutdown: True
