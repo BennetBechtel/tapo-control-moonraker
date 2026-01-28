@@ -74,7 +74,7 @@ Note: Everywhere you find YOUR_USERNAME you need to insert the name you log into
    sudo systemctl enable tapo-control.service
    ```
 
-   If something does not work you can check the status with `sudo systemctl status tapo-control.service` and logs with `journalctl -u tapo-control` \\
+   If something does not work you can check the status with `sudo systemctl status tapo-control.service` and logs with `journalctl -u tapo-control` 
 
 1. Edit your `moonraker.conf` in Mainsail/Fluidd, add this at the end.\
    Note: `[power printer]` is a magic string that makes Mainsail display a more prominent [printer power](https://docs.mainsail.xyz/overview/quicktips/printer-power-switch) switch UI element, I'd recommend not changing it.
