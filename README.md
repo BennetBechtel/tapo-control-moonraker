@@ -24,6 +24,9 @@ Note: Everywhere you find YOUR_USERNAME you need to insert the name you log into
    Select your smart plug -> Settings -> Device Info -> IP Address \
    Note: You can change the `PORT` if 56427 is already in use (remember to update it in step 7)
 
+    **Important**: You must enable third-party compatibility in the Tapo App: \
+   Me (bottom right) → Third-Party Services → Third-Party Compatibility 
+
 1. Install the required packages from the `requirements.txt` in a virtual environment
 
    ```bash
